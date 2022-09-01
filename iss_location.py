@@ -8,7 +8,6 @@ res = requests.get(url)
 iss_json = res.json()
 
 
-
 def main():
     attractions_lats = iss_json['latitude']
     attractions_lngs = iss_json['longitude']
