@@ -2,7 +2,6 @@ import requests
 import json
 import gmplot
 import pandas
-import os
 
 url = 'https://api.wheretheiss.at/v1/satellites/25544'
 res = requests.get(url)
