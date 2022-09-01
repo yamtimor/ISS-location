@@ -8,16 +8,12 @@ res = requests.get(url)
 iss_json = res.json()
 
 
-# print(iss_json)
 
 def main():
-    # extracting the coordinates from the json
     attractions_lats = iss_json['latitude']
     attractions_lngs = iss_json['longitude']
 
-    # map creation and mark the iss on map
-    gmap1 = gmplot.GoogleMapPlotter(attractions_lats,
-                                attractions_lngs, 1)
+    gmap1 = gmplot.GoogleMapPlotter(attractions_lats, attractions_lngs, 1)
 
     attractions_lats, attractions_lngs = zip(*[(iss_json['latitude'], iss_json['longitude'])])
 
